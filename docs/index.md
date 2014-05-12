@@ -1,50 +1,74 @@
-# Certamine sortes polenta nobis agitantem Neptune agmina
+# Telekom Security Automation
 
-## Nec ablata sternebat silicem
+## Scope
 
-Lorem markdownum *differt* irata iura gaudere favilla aequales abstuleris et
-illa dubitate dignos. Modo caecaque si comitesque omnesque, insula reparatque
-quam; sine ramis terram rursusque placui, et? Ab quaeque ultima ob e omnia
-quamquam, audiat, bisque caelo **anxius** aquis in utque Mopsum, pacali; secura.
-**Ruris** quinque Aegides ait errat quaeque: raptu vota portabat fera.
+Server Hardening is not a new topic. Various people around the world spent ages on this topic. Why do we need another?
 
-> Vox nec Hactenus **Troia circumfuso** factum aptarique vetustas die spatio.
-> Misit incessit armos, *me* pudor membra annos adulantes et opem prodita.
-> Petentes non huius Crocale obversus temptabat illuc perhorruit somnum, quoque?
+At Deutsche Telekom we need to manage thousands of servers for our customers and ourselves. All servers need to be configured properly and maintained. It becomes quite a task to keep all servers with the best known configuration.
 
-Primas dum! Tunc mihi quoque. Suco non; saevit fulva faciem. Atro cum omnes
-milite, conquesti resumere: e stupet dixerat nitentem, demittere mater Venus
-inpleverunt cecidisse, hic.
+Since we use Chef and Puppet to automate the deployment, why shouldn't we automate the server and application hardening? We identified 3 phases to secure a server.
 
-## Artus conspectior videt correptaque somno perfundere aethere
+1.  Installation of operating system
+2.  Installation and hardening of operating system and applications
+3.  Continuous management and verification of security configuration
 
-Vocari domos locat matrisque avem, siqua meritasque adiit [mutatur
-tum](http://imgur.com/). Pomis dici alligat quam erravit, sonitum.
-[Dies](http://www.lipsum.com/) amnem quies undas. Cum ego alis pluma
-[quibus](http://imgur.com/), sanguine mutata. Dedit e refers nunc, candidus
-ultro recludere novus lucis unda superatus extremum, se horrent caesa redeunt
-non.
+### Installation of OS
 
-1. Libera mundumque operum me mollit mirantem nec
-2. Tenent sub viva Orpheus lapidumque constitit oculis
-3. Illa prolem
-4. Loquendi subit sine velle
-5. Eras cruoris proque livent
-6. Sit per
+We recommend to install operating systems from trusted sources. This could be an operating system vendor or a trusted third party. If possible, we use vendor images. Since we use virtualize environments like OpenStack in our own infrastructure, the secure generation of operating systems is part of a secure infrastrucutre too. Therefore we automated the building of RedHat, Centos and Oracle Linux for those.
 
-Pavido vallibus volantem sparsaque videri. Formosus sua vel dum sequiturque
-**telum est**, est signa forsitan subitisque erat. Opes dicere acclinia terga
-cui germane, quanto sanguine cornua ingreditur castris *propinquas agilis
-patriaque* nomen, sperat! Ante praecipitem fortius deseruere novum nec
-**Vulcanum** times, pro exilibus conterit.
+* [packer-rhel](https://github.com/TelekomLabs/packer-rhel)
 
-Prospectet nam si, et lapsae questaque ille multaque petita ausis rogantis.
-Mortalia ab manet simul dentes; oculosque officioque deum ab arma saeva
-cedentes. *Surdaeque* effugit litus, ferebat magis conscendunt malo accipe
-*pollice tamen*; temptat ore haec venturas dum. Vobisque leniat rescierit
-thyrsos Oedipodioniae claro et specie mugiat. Pollice vincula magnis deus Troia;
-est vires iracunda si ipsum.
+### Hardening of OS and Applications
 
-[Dies]: http://www.lipsum.com/
-[mutatur tum]: http://imgur.com/
-[quibus]: http://imgur.com/
+We provide multiple recipes in this area. We used best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) or [NSA](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf)
+
+Chef Cookbooks
+
+* [chef-os-hardening](https://github.com/TelekomLabs/chef-os-hardening)
+* [chef-ssh-hardening](https://github.com/TelekomLabs/chef-ssh-hardening)
+* [chef-mysql-hardening](https://github.com/TelekomLabs/chef-mysql-hardening)
+
+Puppet Modules
+
+* [puppet-os-hardening](https://github.com/TelekomLabs/puppet-os-hardening)
+* [puppet-ssh-hardening](https://github.com/TelekomLabs/puppet-ssh-hardening)
+
+### Continuous management
+
+This area includes tasks like patch management, attack monitor systems and fixing of known vulnerabilities and exposures. Various solutions are available, but we will not cover issues within this area.
+
+## Supported Operating Systems
+
+✔ supported, ∅ not supported yet, ✘ will not be supported
+
+| Operating System    | Supported     | Status |
+| ------------- | ---------- | --------- |
+| RedHat 6.5 | ✔ | full coverage |
+| RedHat 7 | ∅ | not tested |  
+| CentOS 6.5 | ✔ | full coverage | 
+| Oracle Linux 6.5 | ✔ | full coverage | 
+| Ubuntu 12.04 | ✔ | full coverage | 
+| Ubuntu 14.04 | ✔ | full coverage |
+| Debian 6 | ∅ | not fully tested, but should work | 
+| Debian 7 | ∅ | not fully tested, but should work | 
+| Suse Enterprise 11 SP3 | ∅ | not tested | 
+
+## Blog 
+
+We collect interesting findings in our blogs:
+
+ * [Using Test Kitchen With Puppet](http://ehaselwanter.com/en/blog/2014/05/08/using-test-kitchen-with-puppet/)
+
+## Team
+
+This project was initiated by Dominik Richter, Patrick Meier and Christoph Hartmann, a group of specialists, security researchers and cloud engineers. 
+
+- Dominik Richter
+- Patrick Meier
+- Christoph Hartmann
+
+These people have generously contributed (in alphabetical order)
+
+- Edmund Haselwanter 
+- Bernhard Weisshuhn
+
