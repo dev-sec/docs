@@ -58,6 +58,7 @@ This area includes tasks like patch management, attack monitor systems and fixin
 We collect interesting findings in our blogs:
 
  * [Using Test Kitchen With Puppet](http://ehaselwanter.com/en/blog/2014/05/08/using-test-kitchen-with-puppet/)
+ * [How to harden a new server with Chef](http://lollyrock.com/articles/how-to-harden-a-new-server/)
 
 ## Team
 
