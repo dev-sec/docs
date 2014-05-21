@@ -1,4 +1,4 @@
-# Telekom Security Automation
+# Automatic server hardening
 
 ## Scope
 
@@ -24,14 +24,17 @@ We provide multiple recipes in this area. We used best-known guides like [Deutsc
 
 Chef Cookbooks
 
+* [example-chef-hardening](https://github.com/TelekomLabs/example-chef-hardening)
 * [chef-os-hardening](https://github.com/TelekomLabs/chef-os-hardening)
 * [chef-ssh-hardening](https://github.com/TelekomLabs/chef-ssh-hardening)
 * [chef-mysql-hardening](https://github.com/TelekomLabs/chef-mysql-hardening)
 
 Puppet Modules
 
+* [example-puppet-hardening](https://github.com/TelekomLabs/example-puppet-hardening)
 * [puppet-os-hardening](https://github.com/TelekomLabs/puppet-os-hardening)
 * [puppet-ssh-hardening](https://github.com/TelekomLabs/puppet-ssh-hardening)
+* [puppet-mysql-hardening](https://github.com/TelekomLabs/puppet-mysql-hardening)
 
 ### Continuous management
 
@@ -52,24 +55,3 @@ This area includes tasks like patch management, attack monitor systems and fixin
 | Debian 6 | ∅ | not fully tested, but should work | 
 | Debian 7 | ∅ | not fully tested, but should work | 
 | Suse Enterprise 11 SP3 | ∅ | not tested | 
-
-## Blog 
-
-We collect interesting findings in our blogs:
-
- * [Using Test Kitchen With Puppet](http://ehaselwanter.com/en/blog/2014/05/08/using-test-kitchen-with-puppet/)
- * [How to harden a new server with Chef](http://lollyrock.com/articles/how-to-harden-a-new-server/)
-
-## Team
-
-This project was initiated by Dominik Richter, Patrick Meier and Christoph Hartmann, a group of specialists, security researchers and cloud engineers. 
-
-- Dominik Richter
-- Patrick Meier
-- Christoph Hartmann
-
-These people have generously contributed (in alphabetical order)
-
-- Edmund Haselwanter 
-- Bernhard Weisshuhn
-
