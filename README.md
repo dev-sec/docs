@@ -7,7 +7,7 @@ We use [MkDocs](http://www.mkdocs.org/) to document all hardening projects
     # build the site
     mkdocs build
     # update master branch
-    ghp-import -b master -p site
+    ghp-import -b gh-pages -p site
 
 ## Author
 
