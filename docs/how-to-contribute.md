@@ -12,7 +12,11 @@ Read on for detailed steps
 
 ## License
 
-This project is Apache 2 licensed. Every contribution must be under the Apache 2 License too. For new files we have added a section with [License Headers](/docs/license-headers). In addition to the license we only accept contributions signed as your work. The sign-off is a simple line at the end of the explanation for the patch, which certifies that you wrote it or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify the below (from [developercertificate.org](developercertificate.org)):
+This project is Apache 2 licensed. Every contribution must be under the Apache 2 License too. For new files we have added a section with [License Headers](/docs/license-headers). 
+
+### Sign your work
+
+In addition to the license we only accept contributions signed as your work. The sign-off is a simple line at the end of the explanation for the patch, which certifies that you wrote it or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify the below (from [developercertificate.org](developercertificate.org)):
 
 ```
 Developer Certificate of Origin
@@ -52,6 +56,20 @@ By making a contribution to this project, I certify that:
     maintained indefinitely and may be redistributed consistent with
     this project or the open source license(s) involved.
 ```
+
+then you just add a line to every git commit message:
+
+    TelekomLabs-DCO-1.1-Signed-off-by: Joe Smith <joe.smith@email.com> (github: github_handle)
+
+using your real name (sorry, no pseudonyms or anonymous contributions.)
+
+One way to automate this, is customise your get ``commit.template`` by adding
+a ``prepare-commit-msg`` hook to your hardening project checkout:
+
+```
+curl -o .git/hooks/prepare-commit-msg https://raw.githubusercontent.com/TelekomLabs/docs/blob/master/docs/contrib/prepare-commit-msg.hook && chmod +x .git/hooks/prepare-commit-msg
+```
+* Note: the above script expects to find your GitHub user name in ``git config --get github.user``
 
 ## Contributing to the Hardening Framework Projects
 
