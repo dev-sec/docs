@@ -137,3 +137,14 @@ In order to have your contribution accepted as quickly as possible, we have some
 - Follow the current style of the code where appropriate.
 - Run the provided lint, spec and integration tests
 
+## Linting
+
+We run several linting tools in our continuous integration pipeline. 
+
+### Ruby - Rubocop
+
+[Rubocop](https://github.com/bbatsov/rubocop) catches a lot of basic syntax infractions and provides ruby best practice advise like using double quotes for strings that do not interpolate Ruby variables, or using simple if/else statements when a one-line ternary operator would be sufficient. This helps enforcing a common style guide and avoiding time consuming best practice discussions in pull requests. Have a look at [A community-driven Ruby coding style guide(]https://github.com/bbatsov/ruby-style-guide) for further details.
+
+We run all our 
+
+
