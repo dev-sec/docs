@@ -18,9 +18,9 @@ We recommend to install operating systems from trusted sources. This could be an
 
 * [packer-rhel](https://github.com/TelekomLabs/packer-rhel)
 
-### Hardening of OS and Applications
+### Hardening
 
-We provide multiple recipes in this area. We used best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) or [NSA](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf)
+We provide multiple cookbooks for chef and modules for puppet to cover this area. We use best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) and the [NSA hardening guide](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf). For more details look into the respective `test-<project>` repository. Checks are implemented following these guides.
 
 
 ### Continuous management
