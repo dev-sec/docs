@@ -39,19 +39,3 @@ Puppet Modules
 ### Continuous management
 
 This area includes tasks like patch management, attack monitor systems and fixing of known vulnerabilities and exposures. Various solutions are available, but we will not cover issues within this area.
-
-## Supported Operating Systems
-
-✔ supported, ∅ not supported yet, ✘ will not be supported
-
-| Operating System    | Supported     | Status |
-| ------------- | ---------- | --------- |
-| RedHat 6.5 | ✔ | full coverage |
-| RedHat 7 | ∅ | not tested |  
-| CentOS 6.5 | ✔ | full coverage | 
-| Oracle Linux 6.5 | ✔ | full coverage | 
-| Ubuntu 12.04 | ✔ | full coverage | 
-| Ubuntu 14.04 | ✔ | full coverage |
-| Debian 6 | ∅ | not fully tested, but should work | 
-| Debian 7 | ∅ | not fully tested, but should work | 
-| Suse Enterprise 11 SP3 | ∅ | not tested | 
