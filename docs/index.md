@@ -18,11 +18,23 @@ We recommend to install operating systems from trusted sources. This could be an
 
 * [packer-rhel](https://github.com/TelekomLabs/packer-rhel)
 
-### Hardening of OS and Applications
+### Hardening
 
-We provide multiple recipes in this area. We used best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) or [NSA](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf)
+We provide multiple cookbooks for chef and modules for puppet to cover this area. We use best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) and the [NSA hardening guide](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf). For more details look into the respective `test-<project>` repository. Checks are implemented following these guides.
 
 
 ### Continuous management
 
-This area includes tasks like patch management, attack monitor systems and fixing of known vulnerabilities and exposures. Various solutions are available, but we will not cover issues within this area.
+This area includes tasks like patch management, attack monitoring, and fixing known vulnerabilities. None of these areas are covered in this hardening project.
+
+#### Patch management
+
+It is the heart of keeping your systems secure once everything is in place. So why not patch automatically on every run? We have considered this option for our hardening components but ultimately decided against it: Patches generally aren't a trivial thing to do. Even if you reduce it to security updates only, there may still be regressions which have to be weighted against benefits. Set up a patch management system of your choice.
+
+#### Attack monitoring
+
+Hardening includes a small section of compliance monitoring. Every time an attacker changes a core system configuration, you can gain insights into this through hardening. Since all of our components are tested independently, you can potentially use these tests to validate the compliance of your configuration. However, we recommend against putting too much weight on the results you get. The tests created here are written to verify hardening instructions. Attackers may still find ways to modify files in a way that gets around these checks (example: if we check `main.cfg` only, but attacker writes to `main.cfg.d/my.cfg`). Use HIDS, auditing, and monitoring systems to manage these risks.
+
+#### Vulnerability fixes
+
+A remainder of vulnerabilities may still remain after successful patch management. There are vulnerabilities that need mitigation before proper vendor fixes are released. We won't cover such vulnerabilities in this project. Many settings, however, are meant to reduce the attack surface and thus directly contribute to reducing the risks from unpatched vulnerabilities.
