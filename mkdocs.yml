@@ -9,6 +9,7 @@ pages:
 
 # Coding
 - ['coding/contributing.md', 'Coding', 'Contributing']
+- ['coding/linting.md', 'Coding', 'Linting']
 - ['coding/headers.md', 'Coding', 'File headers']
 
 # Principles
