@@ -283,8 +283,36 @@ done.
 
 ### Puppet - Puppet-Lint
 
+[Puppet-Lint](http://puppet-lint.com) is a special linter for puppet modules. The rake task is configured to fail on `any` violation. 
+
 ```
-± rake lint
+± bundle exec rake -T |grep puppet-lint
+rake lint             # Run puppet-lint / Check puppet manifests with puppet-lint
+rake run_all_linters  # Run all linters: rubocop and puppet-lint
+```
+
+We disabled some checks from puppet-lint
+
+```
+± grep Lint Rakefile
+PuppetLint.configuration.send('disable_autoloader_layout')
+PuppetLint.configuration.send('disable_80chars')
+PuppetLint.configuration.send('disable_inherits_across_namespaces')
+PuppetLint.configuration.fail_on_warnings = true
+PuppetLint.configuration.ignore_paths = ['vendor/**/*.pp'] 
+```
+
+If everything is well the exit code is 0, and no further output is displayed:
+
+```
+± bundle exec rake lint
+± echo $?
+0
+```
+
+If there is an error or a warning you get some output and an exit code <> 0
+```
+± bundle exec rake lint
 manifests/init.pp - WARNING: double quoted string containing no variables on line 10
 rake aborted!
 
