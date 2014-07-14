@@ -22,19 +22,6 @@ We recommend to install operating systems from trusted sources. This could be an
 
 We provide multiple recipes in this area. We used best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) or [NSA](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf)
 
-Chef Cookbooks
-
-* [example-chef-hardening](https://github.com/TelekomLabs/example-chef-hardening)
-* [chef-os-hardening](https://github.com/TelekomLabs/chef-os-hardening)
-* [chef-ssh-hardening](https://github.com/TelekomLabs/chef-ssh-hardening)
-* [chef-mysql-hardening](https://github.com/TelekomLabs/chef-mysql-hardening)
-
-Puppet Modules
-
-* [example-puppet-hardening](https://github.com/TelekomLabs/example-puppet-hardening)
-* [puppet-os-hardening](https://github.com/TelekomLabs/puppet-os-hardening)
-* [puppet-ssh-hardening](https://github.com/TelekomLabs/puppet-ssh-hardening)
-* [puppet-mysql-hardening](https://github.com/TelekomLabs/puppet-mysql-hardening)
 
 ### Continuous management
 

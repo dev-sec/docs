@@ -1,2 +1,21 @@
 site_name: Automatic server hardening
 theme: bootstrap
+docs_dir: docs
+
+pages:
+
+# Introduction
+- ['index.md', 'Introduction']
+
+# Coding
+- ['coding/contributing.md', 'Coding', 'Contributing']
+- ['coding/headers.md', 'Coding', 'File headers']
+
+# Principles
+- ['principles.md', 'Principles']
+
+# Chef
+- ['chef.md', 'Chef']
+
+# Puppet
+- ['puppet.md', 'Puppet']

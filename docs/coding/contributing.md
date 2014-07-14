@@ -1,4 +1,4 @@
-# Overview
+# Contributing
 
 The general steps are:
 
@@ -12,7 +12,7 @@ Read on for detailed steps
 
 ## License
 
-This project is Apache 2 licensed. Every contribution must be under the Apache 2 License too. For new files we have added a section with [License Headers](/docs/license-headers). 
+This project is Apache 2 licensed. Every contribution must be under the Apache 2 License too. For new files we have added a section with [License Headers](/docs/license-headers).
 
 ### Sign your work
 
@@ -76,7 +76,7 @@ curl -o .git/hooks/prepare-commit-msg https://raw.githubusercontent.com/TelekomL
 
 Below, replace "REPO" with the project that should be changed. Replace "USER" with your GitHub username.
 
-0. Create a issue for the bug, feature or improvement you are contributing. 
+0. Create a issue for the bug, feature or improvement you are contributing.
 
 See [Mastering Issues](https://guides.github.com/features/issues/) for details
 
