@@ -20,3 +20,6 @@ pages:
 
 # Puppet
 - ['puppet.md', 'Puppet']
+
+# Faq
+- ['faq.md', 'FAQ']
