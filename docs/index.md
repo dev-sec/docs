@@ -16,9 +16,9 @@ Since we use Chef and Puppet to automate our deployments, we decided to put them
 
 **What is part of hardening?**
 
-* **Attack surface reduction**: Use service configurations to remove all those components, that are often activated for legacy compatibility or simplified setups. Some default configurations these days already cover good security practices. We take a step further and make sure to remove all components, which aren't usually required, and reduce many entry points for hackers. This baseline changes over time. We keep track of these developments and integrate them with this project.
+* **Attack surface reduction**: Use service configurations to remove all those components, that are often activated for legacy compatibility or simplified setups. Some default configurations these days already cover good security practices. We take a step further and make sure to deactivate all application modules, which aren't usually required. This baseline changes over time. We keep track of these developments and integrate them with this project.
 
-* **Secure configuration**: It's easy enough to find a guide in a 2 minute search which will tell you to "Set this to 0 and everything will work". Without investigation, many admins aren't aware of the implications a few configuration lines may carry. Moreover, even a simple starting configuration can quickly make it into a production setup. To avoid these easy mistakes, we make the configuration explicit and default to a secure baseline. Many settings aren't changeable and some will yield errors and warnings with this framework.
+* **Secure configuration**: It's easy enough to find a guide in a 2 minute search which will tell you to "Set this to 0 and everything will work". Without investigation, it's difficult to know what implications a few configuration lines may carry. Moreover, even a simple starting configuration can quickly make it into a production setup. To avoid these easy mistakes, we make the configuration explicit and default to a secure baseline. Many settings aren't changeable and some will yield errors and warnings with this framework.
 
 * **Core components**: Anything from the basic operating system to well known databases and web servers is part of this project. We want these common building blocks to be at their optimal configuration and avoid repeated mistakes.
 
