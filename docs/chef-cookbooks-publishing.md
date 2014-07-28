@@ -9,6 +9,8 @@ The easy way:
         cd chef-os-hardening
         stove
 
+In case of errors: Use the method below to ensure that your `metadata.rb` is configure correctly. If you cannot generate a `metadata.json`, fix this error first.
+
 ## Chef-route
 
 We will use `chef-ssh-hardening` as an example project.
