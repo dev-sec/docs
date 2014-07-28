@@ -1,20 +1,42 @@
 # Automatic server hardening
 
+Server hardening is a well-known topic with many guides out in the wild. Why this project?
+
+At Deutsche Telekom we need to manage thousands of servers for customers and ourselves. All servers need to be configured properly and maintained, which is difficult and time-consuming to get right.
+
+To answer these needs for security, compliance, and maintainability, we decided to launch this project as a common ground for requirements and their fulfillment.
+
+## Vision / Goal
+
+Our goal is simple: Create a common layer for hardening operating systems and services easily and without interference. Even if you aren't knee-deep in configuration manuals for services or the latest security recommendations, you will be able to implement and use this framework with ease.
+
 ## Scope
 
-Server Hardening is not a new topic. Various people around the world spent ages on this topic. Why do we need another?
+Since we use Chef and Puppet to automate our deployments, we decided to put them to work for system hardening. The hardening project is currently limited to Chef and Puppet, though extensions to other automation frameworks are welcome!
 
-At Deutsche Telekom we need to manage thousands of servers for our customers and ourselves. All servers need to be configured properly and maintained. It becomes quite a task to keep all servers with the best known configuration.
+**What is part of hardening?**
 
-Since we use Chef and Puppet to automate the deployment, why shouldn't we automate the server and application hardening? We identified 3 phases to secure a server.
+* **Attack surface reduction**: Use service configurations to remove all those components, that are often activated for legacy compatibility or simplified setups. Some default configurations these days already cover good security practices. We take a step further and make sure to deactivate all application modules, which aren't usually required. This baseline changes over time. We keep track of these developments and integrate them with this project.
 
-1.  Installation of operating system
-2.  Installation and hardening of operating system and applications
-3.  Continuous management and verification of security configuration
+* **Secure configuration**: It's easy enough to find a guide in a 2 minute search which will tell you to "Set this to 0 and everything will work". Without investigation, it's difficult to know what implications a few configuration lines may carry. Moreover, even a simple starting configuration can quickly make it into a production setup. To avoid these easy mistakes, we make the configuration explicit and default to a secure baseline. Many settings aren't changeable and some will yield errors and warnings with this framework.
+
+* **Core components**: Anything from the basic operating system to well known databases and web servers is part of this project. We want these common building blocks to be at their optimal configuration and avoid repeated mistakes.
+
+**What is NOT part of hardening?**
+
+* **Patch management**: We track changes and will update every piece of this project to work with current and older supported versions of operating systems and applications. However, we cannot safely automate all aspects of patch management. Nevertheless, you can easily integrate hardening into your patch management lifecycle.
+
+* **Minor components**: It's easy to set up a configuration for a service at some point of time and make it secure. It's much more difficult to maintain it over time and support it. We will focus on wide-spread services and components and support them with your and our feedback.
+
+* **Complex configurations**: This includes: Firewall configurations, web-application firewalls, AppArmor profiles or SELinux configurations, amongst others. These are incredibly important to have in your environment, however, their configuration is too dependent on specific setups to abstracted properly. We decided to focus on those components, that are able to take a generalized into their configuration. For everything else, feel free to get in touch with us.
+
+## Lifecycle
+
+Let's take a quick look at the full lifecycle for servers and services and see where hardening fits in.
 
 ### Installation of OS
 
-We recommend to install operating systems from trusted sources. This could be an operating system vendor or a trusted third party. If possible, we use vendor images. Since we use virtualize environments like OpenStack in our own infrastructure, the secure generation of operating systems is part of a secure infrastrucutre too. Therefore we automated the building of RedHat, Centos and Oracle Linux for those.
+We recommend to install operating systems from trusted sources. This could be an operating system vendor or a trusted third party. In virtualized environments like OpenStack, the secure generation of base images is part of our daily activity. We have automated the building of RedHat, CentOS and Oracle Linux based instances.
 
 * [packer-rhel](https://github.com/TelekomLabs/packer-rhel)
 
