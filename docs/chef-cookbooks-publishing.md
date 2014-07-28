@@ -1,5 +1,16 @@
 # Publishing Cookbooks
 
+## Stove-route
+
+The easy way:
+
+        gem install stove
+        stove login --username YOURNAME --key ~/.chef/YOURKEY.pem
+        cd chef-os-hardening
+        stove
+
+## Chef-route
+
 We will use `chef-ssh-hardening` as an example project.
 
 1. Install chef
