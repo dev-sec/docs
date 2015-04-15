@@ -4,22 +4,22 @@ The following modules are part of the hardening framework:
 
 Base Operating System
 
-* [chef-os-hardening](https://github.com/TelekomLabs/chef-os-hardening)
-* [chef-ssh-hardening](https://github.com/TelekomLabs/chef-ssh-hardening)
+* [chef-os-hardening](https://github.com/hardening-io/chef-os-hardening)
+* [chef-ssh-hardening](https://github.com/hardening-io/chef-ssh-hardening)
 
 Database
 
-* [chef-mysql-hardening](https://github.com/TelekomLabs/chef-mysql-hardening)
-* [chef-postgres-hardening](https://github.com/TelekomLabs/chef-postgres-hardening)
+* [chef-mysql-hardening](https://github.com/hardening-io/chef-mysql-hardening)
+* [chef-postgres-hardening](https://github.com/hardening-io/chef-postgres-hardening)
 
 Web Server
 
-* [chef-nginx-hardening](https://github.com/TelekomLabs/chef-nginx-hardening)
-* [chef-apache-hardening](https://github.com/TelekomLabs/chef-apache-hardening)
+* [chef-nginx-hardening](https://github.com/hardening-io/chef-nginx-hardening)
+* [chef-apache-hardening](https://github.com/hardening-io/chef-apache-hardening)
 
 Example
 
-* [example-chef-hardening](https://github.com/TelekomLabs/example-chef-hardening)
+* [example-chef-hardening](https://github.com/hardening-io/example-chef-hardening)
 
 
 ## Publishing Cookbooks

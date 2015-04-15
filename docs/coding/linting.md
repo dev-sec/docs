@@ -2,7 +2,7 @@
 
 We run several linting tools in our continuous integration pipeline. If you create a pull request the CI will kick in and run [Rubocop](https://github.com/bbatsov/rubocop) for every project as well as [Foodcritic](http://www.foodcritic.io) for chef repos or [puppet-lint](http://puppet-lint.com) for puppet repos. The tasks are provided as Rake Tasks ready to run an give feedback.
 
-Here the example output of the [chef-os-hardening project](https://github.com/TelekomLabs/chef-os-hardening) (kitchen-tasks stripped):
+Here the example output of the [chef-os-hardening project](https://github.com/hardening-io/chef-os-hardening) (kitchen-tasks stripped):
 
 ```shell
 ± bundle exec rake -T
@@ -111,7 +111,7 @@ Inspecting 6 files
 
 [Foodcritic](http://www.foodcritic.io) is a special linter for chef cookbooks. The rake task is configured to fail on `any` violation. We, as a project, decided to use the single quoted string node attribute notation to honor [FC019](http://www.foodcritic.io/#FC019).
 
-There are some edge cases were, upon discussion a violation is tolerated. This can be done with a special markup in the code itself. Following an example (taken from [chef-ssh-hardening server.rb](https://github.com/TelekomLabs/chef-ssh-hardening/blob/master/recipes/server.rb#L41))
+There are some edge cases were, upon discussion a violation is tolerated. This can be done with a special markup in the code itself. Following an example (taken from [chef-ssh-hardening server.rb](https://github.com/hardening-io/chef-ssh-hardening/blob/master/recipes/server.rb#L41))
 
 ```ruby
   search('users', "#{field}:*").map do |v| # ~FC003 ignore footcritic violation

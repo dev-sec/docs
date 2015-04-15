@@ -1,9 +1,9 @@
 #!/bin/sh
-#       Auto sign all commits to allow them to be used by the TelekomLabs project.
-#       see https://github.com/TelekomLabs/docs/blob/master/docs/how-to-contribute.md#sign-your-work
+#       Auto sign all commits to allow them to be used by the Hardening Framework project.
+#       see https://github.com/hardening-io/docs/blob/master/docs/how-to-contribute.md#sign-your-work
 #
 GH_USER=$(git config --get github.user)
-SOB=$(git var GIT_AUTHOR_IDENT | sed -n "s/^\(.*>\).*$/TelekomLabs-DCO-1.1-Signed-off-by: \1 \(github: $GH_USER\)/p")
+SOB=$(git var GIT_AUTHOR_IDENT | sed -n "s/^\(.*>\).*$/HardeningFramework-DCO-1.1-Signed-off-by: \1 \(github: $GH_USER\)/p")
 grep -qs "^$SOB" "$1" || { 
 	echo 
 	echo "$SOB" 

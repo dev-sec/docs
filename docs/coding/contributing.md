@@ -59,7 +59,7 @@ By making a contribution to this project, I certify that:
 
 then you just add a line to every git commit message:
 
-    TelekomLabs-DCO-1.1-Signed-off-by: Joe Smith <joe.smith@email.com> (github: github_handle)
+    HardeningFramework-DCO-1.1-Signed-off-by: Joe Smith <joe.smith@email.com> (github: github_handle)
 
 using your real name (sorry, no pseudonyms or anonymous contributions.)
 
@@ -67,7 +67,7 @@ One way to automate this, is customise your get ``commit.template`` by adding
 a ``prepare-commit-msg`` hook to your hardening project checkout:
 
 ```
-curl -o .git/hooks/prepare-commit-msg https://raw.githubusercontent.com/TelekomLabs/docs/master/docs/contrib/prepare-commit-msg.hook && chmod +x .git/hooks/prepare-commit-msg
+curl -o .git/hooks/prepare-commit-msg https://raw.githubusercontent.com/hardening-io/docs/master/docs/contrib/prepare-commit-msg.hook && chmod +x .git/hooks/prepare-commit-msg
 ```
 * Note: the above script expects to find your GitHub user name in ``git config --get github.user``, set it with `git config --global github.user <username>`
 
@@ -82,7 +82,7 @@ See [Mastering Issues](https://guides.github.com/features/issues/) for details
 
 1. Fork the repository on GitHub.
 
-    TelekomLabs/REPO -> USER/REPO
+    HardeningFramework/REPO -> USER/REPO
 
     You can replace REPO in your fork with a name for the repository
     that makes it unique, if required.
@@ -103,7 +103,7 @@ See [Mastering Issues](https://guides.github.com/features/issues/) for details
 instead of your origin.
 
     ```
-    git remote add upstream git://github.com/TelekomLabs/REPO.git
+    git remote add upstream git://github.com/hardening-io/REPO.git
     git config branch.master.remote upstream
     ```
 

@@ -1,4 +1,4 @@
-# Telekom Security Pages
+# Hardening Framework Documentation
 
 We use [MkDocs](http://www.mkdocs.org/) to document all hardening projects
 
@@ -12,6 +12,7 @@ We use [MkDocs](http://www.mkdocs.org/) to document all hardening projects
 ## Author
 
 * Author:: Christoph Hartmann <chris@lollyrock.com>
+* Author:: Hardening Framework Team
 * Author:: Deutsche Telekom AG
 
 Licensed under the Apache License, Version 2.0 (the "License");
