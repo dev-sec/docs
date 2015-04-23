@@ -1,7 +1,8 @@
 site_name: Hardening Framework
-theme: bootstrap
+site_description: DevOps and Security
+theme: readthedocs
 docs_dir: docs
-
+repo_url: https://github.com/hardening-io/docs
 pages:
 
 # Introduction
