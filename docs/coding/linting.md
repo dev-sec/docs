@@ -83,7 +83,7 @@ Tasks: TOP => run_all_linters => foodcritic
 
 [Rubocop](https://github.com/bbatsov/rubocop) catches a lot of basic syntax infractions and provides ruby best practice advise like using double quotes for strings that do not interpolate Ruby variables, or using simple if/else statements when a one-line ternary operator would be sufficient. This helps enforcing a common style guide and avoiding time consuming best practice discussions in pull requests. Have a look at [A community-driven Ruby coding style guide](https://github.com/bbatsov/ruby-style-guide) for further details.
 
-Every project has a rake task to run rubocop as well as a task were all linters for the project are run, including rubocop:
+Every project has a rake task to run rubocop as well as a task where all linters for the project are run, including rubocop:
 
 ```
 ± bundle exec rake -T|grep rubocop
